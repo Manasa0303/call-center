@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>InspireWorks IVR Demo</title>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <div class="logo">InspireWorks</div>
+            <h1>IVR Control Center</h1>
+            <p>Initiate and manage your demo calls seamlessly.</p>
+        </header>
+
+        <main>
+            <div class="card glass">
+                <h2>📞 Initiate Call</h2>
+                <form id="callForm">
+                    <div class="input-group">
+                        <label for="ngrokUrl">Ngrok URL (Base URL)</label>
+                        <input type="url" id="ngrokUrl" placeholder="https://xxxx.ngrok-free.app" required>
+                        <small>Paste your active Ngrok forwarding URL here.</small>
+                    </div>
+
+                    <div class="input-group">
+                        <label for="targetNumber">Target Phone Number</label>
+                        <input type="tel" id="targetNumber" placeholder="918031274121" value="918031274121">
+                    </div>
+
+                    <button type="submit" id="callBtn">
+                        <span class="icon">📲</span> Make Call
+                    </button>
+                </form>
+
+                <div id="statusMessage" class="status hidden"></div>
+            </div>
+
+            <div class="visualizer">
+                <h3>Call Flow</h3>
+                <div class="steps">
+                    <div class="step active">Start</div>
+                    <div class="line"></div>
+                    <div class="step">Language</div>
+                    <div class="line"></div>
+                    <div class="step">Action</div>
+                </div>
+            </div>
+        </main>
+
+        <footer>
+            <p>Powered by Plivo Voice API</p>
+        </footer>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
